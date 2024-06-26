@@ -1,0 +1,30 @@
+<main>
+        <div>
+            <div class="error-container">
+                {{#each errors}}
+                <p>{{this}}</p>
+                {{/each}}
+            </div>
+        </div> 
+        <section class="form-container">
+            <h2>Edit Recipe</h2>
+            <form method="post">
+                <label for="title">Recipe Title:</label>
+                <input type="text" id="title" name="title" value="{{recipe.title}}">
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description">{{recipe.description}}</textarea>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients">{{recipe.ingredients}}</textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions">{{recipe.instructions}}</textarea>
+
+                <label for="image">Image URL:</label>
+                <input type="url" id="image" name="image" value="{{recipe.image}}">
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>

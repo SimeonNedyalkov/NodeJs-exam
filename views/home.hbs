@@ -1,0 +1,26 @@
+<main>
+        <div>
+            <div class="error-container">
+                {{#each errors}}
+                <p>{{this}}</p>
+                {{/each}}
+            </div>
+        </div> 
+
+        <section class="hero">
+            <h2>Welcome to Home Cooking Recipes</h2>
+            <p>Your go-to place for delicious and easy-to-make recipes.</p>
+            <a href="/recipes" class="btn">Explore Recipes</a>
+        </section>
+        <section class="featured-recipes">
+            <h2>Featured Recipes</h2>
+            <div class="recipes">
+                {{#each recent}}
+                {{>recipe}}
+                {{else}}
+                <p class="no-post">There are no recipes found yet!</p>
+                {{/each}}
+                <!-- <p class="no-post">There are no recipes found yet!</p> -->
+            </div>
+        </section>
+    </main>
